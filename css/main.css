@@ -14,10 +14,10 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 40px;
+    padding: 10px 20px;
 
-    background-color: #ffff;
-    border: 5px solid #181616;
+    background-color: #f1f1f1;
+    border: 5px solid #ffffff;
     border-radius: 30px;
 }
 
@@ -29,19 +29,21 @@ body{
 
 .navLinks a{
     text-decoration: none;
-    color: aqua;
-    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }
 
 .searchBar input{
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
-    background-color: #181616;
+    background-color: #ffffff;
 }
 
 .logo img{
-    height: 50px;
+    height: 80px;
 }
 
 .hero {
@@ -50,7 +52,7 @@ body{
     align-items: center;
 
     height: 100vh;
-    padding-right: 180px;
+    padding-right: 200px;
     background-image: url("../assets/img/img/homeHeader.png");
     background-size: cover;
     background-repeat: none;
@@ -79,3 +81,55 @@ body{
     color: #000000;
     margin-top: 10px;
 }
+
+.journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 100px 80px;
+    background-color: #002d68;
+}
+
+.journeyImage img{
+    width: 750px;
+    border-radius: 20px;
+}
+
+.journeyText {
+    max-width: 450px;
+}
+
+.journeyText h3{
+    color: #e9ad1c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.journeyText h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffff;
+}
+
+.journeyText p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #ffff;
+    margin-top: 20px;
+}
+
+.journeyText button{
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    background-color: #15d5f5;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
