@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: "TitleFont";
+    src: url("../assets/fonts/Mythology\ Of\ Egypt\ \(3\).otf");
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+
+    background-color: #ffff;
+    border: 5px solid #181616;
+    border-radius: 30px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: aqua;
+    font-weight: 700;
+}
+
+.searchBar input{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #181616;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100vh;
+    padding-right: 180px;
+    background-image: url("../assets/img/img/homeHeader.png");
+    background-size: cover;
+    background-repeat: none;
+    background-position: left center;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 140px;
+    max-width: 500px;
+
+}
+
+.heroText h1{
+    font-family: "TitleFont";
+    font-size: 96px;
+    color: #e9ad1c;
+    margin: 0;
+}
+
+.heroText p{
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 10px;
+}
