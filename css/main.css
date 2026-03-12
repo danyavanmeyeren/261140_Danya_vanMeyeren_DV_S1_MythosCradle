@@ -133,3 +133,31 @@ body{
     cursor: pointer;
 }
 
+.sanctuary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 80px;
+    background-color: #ffffff;
+    width: 80vh;
+    margin: 120px;
+}
+
+.sanctuaryImage img{
+    width: 420px;
+    border-radius: 20px;
+}
+
+.sanctuaryText h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #2b2153;
+}
+
+.sanctuaryText h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+}
+
