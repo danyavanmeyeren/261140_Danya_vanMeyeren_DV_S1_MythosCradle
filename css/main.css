@@ -137,15 +137,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
-    padding: 80px;
+    gap: 120px;
+    padding: 120px 150px;
     background-color: #ffffff;
-    width: 80vh;
-    margin: 120px;
+    max-width: 1500vh;
+    margin: auto;
 }
 
 .sanctuaryImage img{
-    width: 420px;
+    width: 600px;
     border-radius: 20px;
 }
 
@@ -161,3 +161,148 @@ body{
     font-size: 50px;
 }
 
+.sanctuaryText p{
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #6b6b6b;
+    max-width: 500px;
+}
+
+.story{
+    background-color: #002d68;
+    text-align: center;
+    padding: 100px 120px;
+
+}
+
+.storyHeader{
+    color: #e9ad1c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.storyCards{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 60px;
+}
+
+.storyCard{
+    width: 400px;
+    text-align: center;
+}
+
+.storyCard img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+.story h2{
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+
+.story h3{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffff;
+    margin-top: 10px;
+}
+
+.story p{
+    font-family: 'Poppins' sans-serif;
+    font-size: 14px;
+    color: #d9d9d9;
+    margin-top: 10px;
+}
+
+.legendButton{
+    margin-top: 60px;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #15d5f5;
+    color: #ffff;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 600;
+}
+
+.footer{
+    background-color: #ffffff;
+    padding: 80px 120px;
+}
+
+.footerTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLeft img{
+    width: 180px;
+}
+
+.footerLeft p{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    color: #6b6b6b;
+}
+
+.footerCenter{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerCenter h3{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.footerCenter img{
+    width: 250px;
+}
+.footerCenter a{
+    text-decoration: none;
+    color: #6b6b6b;
+    margin-bottom: 12px;
+}
+
+.socialIcons{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socialIcons img{
+    width: 60px;
+    border-radius: 12px;
+}
+
+.footerLine{
+    height: 1px;
+    background-color: #ddd;
+    margin: 50px 0;
+}
+
+.footerBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLinks{
+    display: flex;
+    gap: 40px;
+}
+
+.footerLinks a{
+    text-decoration: none;
+    color: #6b6b6b;
+}
