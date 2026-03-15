@@ -14,17 +14,26 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px 20px;
+    padding: 10px 90px;
+    width: 95%;
+    max-width: 1200px;
 
-    background-color: #f1f1f1;
-    border: 5px solid #ffffff;
+    background-color: rgba(225, 225, 225, 0.6);
+    border: none;
     border-radius: 30px;
+    
+
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .navLinks {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
 }
 
 .navLinks a{
@@ -36,14 +45,26 @@ body{
 }
 
 .searchBar input{
-    padding: 10px 20px;
-    border-radius: 5px;
+    width: 200px;
+    padding: 10px 10px;
+    border-radius: 30px;
     border: none;
-    background-color: #ffffff;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffff;
+    padding: 8px 50px;
+    border-radius: 10px;
+    width: 200px;
 }
 
 .logo img{
-    height: 80px;
+    height: 55px;
 }
 
 .hero {
@@ -76,9 +97,9 @@ body{
 }
 
 .heroText p{
-    font-family: "Poppins", sans-serif;
+    font-family: "Metamorphous", sans-serif;
     font-size: 24px;
-    color: #000000;
+    color: #ffffff;
     margin-top: 10px;
 }
 
