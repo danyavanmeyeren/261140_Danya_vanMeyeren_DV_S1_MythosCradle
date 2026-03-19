@@ -446,3 +446,290 @@ body{
     border-radius: 10px;
     color: #333;
 }
+
+.productSection{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.productContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.productImage img{
+    width: 480px;
+    border-radius: 20px;
+}
+
+.productInfo{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.productInfo h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.priceRow{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.price{
+    font-size: 24px;
+    color: #aaa;
+}
+
+.oldPrice{
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 24px;
+}
+
+.ratingRow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.stars{
+    color: #f2b233;
+}
+
+.divider{
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+}
+
+.dividerLine{
+    border: none;
+    height: 2px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+.tag{
+    color: #777;
+}
+
+.description{
+    font-size: 16px;
+    margin: 30px 0;
+    line-height: 1.5;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.actionRow{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    background-color: #0d2f5b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.quantity button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    padding: 14px 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity span{
+    color: white;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+.addButton{
+    background-color: #15d5f5;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.extraInfo{
+    margin-top: 20px;
+    font-family: 'Poppins',sans-serif;
+    color: #666;
+}
+
+.extraInfo p{
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.extraInfo span{
+    margin-top: 10px;
+}
+
+.infoRow{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.label{
+    width: 120px;
+}
+
+.colon{
+    width: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.value{
+    flex: 1;
+    color: #555;
+}
+
+.kitsune{
+    background-color: #002d68;
+    color: white;
+}
+
+.kitsune .tag{
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.kitsune .price{
+    color: #15d5f5;
+}
+
+.kitsune .quantity{
+    background-color: #e9ad1c;
+}
+
+.kitsune .addButton{
+    background-color: #15d5f5;
+    color: white;
+}
+
+.kitsune hr{
+    background-color: rgba(225, 225, 225, 0.3);
+}
+
+.kitsune .description{
+    color: white;
+}
+
+
+.wisp{
+    background-color: #002d68;
+    color: white;
+}
+
+.wisp .tag{
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.wisp .price{
+    color: #15d5f5;
+}
+
+.wisp .quantity{
+    background-color: #e9ad1c;
+}
+
+.wisp .addButton{
+    background-color: #15d5f5;
+    color: white;
+}
+
+.wisp hr{
+    background-color: rgba(225, 225, 225, 0.3);
+}
+
+.wisp .description{
+    color: white;
+}
+
+
+.spirit{
+    background-color: #002d68;
+    color: white;
+}
+
+.spirit .tag{
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.spirit .price{
+    color: #15d5f5;
+}
+
+.spirit .quantity{
+    background-color: #e9ad1c;
+}
+
+.spirit .addButton{
+    background-color: #15d5f5;
+    color: white;
+}
+
+.spirit hr{
+    background-color: rgba(225, 225, 225, 0.3);
+}
+
+.spirit .description{
+    color: white;
+}
+
+
+.contactHero{
+    position: relative;
+    height: 40vh;
+    background-image: url("../assets/img/img/contactHeader.png");
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.contactHero h1{
+    position: relative;
+    z-index: 2;
+    font-family: "TitleFont";
+    font-size: 120px;
+    color: #ffff;
+    text-align: center;
+    margin: 0;
+}
