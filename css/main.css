@@ -5,7 +5,7 @@ body{
 
 @font-face {
     font-family: "TitleFont";
-    src: url("../assets/fonts/Mythology\ Of\ Egypt\ \(3\).otf");
+    src: url("../assets/fonts/Mythology\ Of\ Egypt.otf") 
 }
 
 .navbar {
@@ -326,4 +326,123 @@ body{
 .footerLinks a{
     text-decoration: none;
     color: #6b6b6b;
+}
+
+.adoptHero{
+    position: relative;
+    height: 40vh;
+    background-image: url("../assets/img/img/adoptHeader.png");
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.adoptHero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.adoptHero h1{
+    position: relative;
+    z-index: 2;
+    font-family: "TitleFont";
+    font-size: 120px;
+    color: #ffff;
+    text-align: center;
+    margin: 0;
+}
+
+
+.adoptIntro{
+    background-color: #002d68;
+    padding: 80px 150px;
+    text-align: center;
+}
+
+.adoptIntro h2{
+    font-family: 'Metamorphous';
+    color: #f2b233;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.adoptIntro p{
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filterBar{
+    background-color: #f2b233;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.filterLeft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-family: 'Poppins';
+}
+.filterLeft i{
+    font-size: 18px;
+}
+
+.filterCenter{
+    border-left: 2px solid rgb(225,225,225,0.4);
+    padding-left: 30px;
+}
+
+.filterCenter p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filterRight{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.showBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.number{
+    background: #f5e6c4;
+    padding: 8px 14px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.sortBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown{
+    background: #f5e6c4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #333;
 }
