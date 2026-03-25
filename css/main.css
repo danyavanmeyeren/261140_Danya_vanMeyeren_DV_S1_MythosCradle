@@ -44,6 +44,10 @@ body{
     font-size: 20px;
 }
 
+.navLinks a:hover{
+    color: #15d5f5;
+}
+
 .searchBar input{
     width: 200px;
     padding: 10px 10px;
@@ -154,6 +158,10 @@ body{
     cursor: pointer;
 }
 
+.journeyText button:hover{
+    background-color: #3bbac9;
+}
+
 .sanctuary{
     display: flex;
     align-items: center;
@@ -254,6 +262,11 @@ body{
     color: #ffff;
     font-family: 'Poppins' sans-serif;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.legendButton:hover{
+    background-color: #3bbac9;
 }
 
 .footer{
@@ -293,6 +306,10 @@ body{
     text-decoration: none;
     color: #6b6b6b;
     margin-bottom: 12px;
+}
+
+.footerCenter a:hover{
+    color: #15d5f5;
 }
 
 .socialIcons{
@@ -581,6 +598,10 @@ body{
     cursor: pointer;
 }
 
+.addButton:hover{
+    background-color: #3bbac9;
+}
+
 
 
 .extraInfo{
@@ -640,6 +661,10 @@ body{
     color: white;
 }
 
+.kitsune .addButton:hover{
+    background-color: #3bbac9;
+}
+
 .kitsune hr{
     background-color: rgba(225, 225, 225, 0.3);
 }
@@ -669,6 +694,10 @@ body{
 .wisp .addButton{
     background-color: #15d5f5;
     color: white;
+}
+
+.wisp .addButton:hover{
+    background-color: #3bbac9;
 }
 
 .wisp hr{
@@ -702,12 +731,40 @@ body{
     color: white;
 }
 
+.spirit .addButton:hover{
+    background-color: #3bbac9;
+}
+
 .spirit hr{
     background-color: rgba(225, 225, 225, 0.3);
 }
 
 .spirit .description{
     color: white;
+}
+
+.viewCradleWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding-right: 10px;
+    padding-left: 100px;
+}
+
+.viewCradleBtn{
+    background-color: #b8953b;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.viewCradleBtn:hover{
+    background-color: #a07f2f;
 }
 
 
@@ -752,7 +809,7 @@ body{
     font-family: 'Poppins';
 }
 
-.label{
+.contactLabel{
     color: #15d5f5;
     font-weight: 600;
     letter-spacing: 1px;
@@ -767,7 +824,7 @@ body{
     margin-bottom: 20px;
 }
 
-.description{
+.contactDescription{
     color: #888;
     line-height: 1.8;
     font-size: 16px;
@@ -805,7 +862,7 @@ body{
     padding-right: 70px;
 }
 
-.label{
+.labelContact{
     color: #15d5f5;
     font-weight: 600;
     font-size: 14px;
