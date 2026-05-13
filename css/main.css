@@ -758,6 +758,7 @@ body{
 .viewCradleBtn{
     background-color: #b8953b;
     color: white;
+    text-decoration: none;
     border: none;
     padding: 18px 40px;
     border-radius: 12px;
@@ -984,4 +985,77 @@ body{
 
 .formCard button:hover{
     background-color: #3bbac9;
+}
+
+.cartSection{
+    padding: 40px;
+}
+
+.cartModalContent{
+    background-color: #ffffff;
+    color: white;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.modal-header{
+    border-bottom: 1px solid rgba(225, 225, 225, 0.3);
+    padding-bottom: 20px;
+}
+
+.btn-close{
+    color: white;
+}
+.modal-title{
+    font-family: "TitleFont";
+    font-size: 48px;
+    color: #3bbac9;
+}
+
+.modal-body{
+    padding-top: 40px;
+}
+
+.modal-body h2{
+    font-family: "TitleFont";
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.modal-body p{
+    font-family: "Poppins" , sans-serif;
+    font-size: 24px;
+    color: #000000;
+}
+
+.modal-footer{
+    border-top: 1px solid rgba(225, 225, 225, 0.3);
+    padding-top: 25px;
+}
+
+.btn-secondary{
+    background-color: #6c757d;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.btn-secondary:hover{
+    background-color: #5a6268;
+}
+
+.btn-warning{
+    background-color: #f2b233;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-family: "Poppins" , sans-serif;
+    font-weight: 600;
+}
+
+.btn-warning:hover{
+    background-color: #a07f2f;
 }
