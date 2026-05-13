@@ -987,48 +987,114 @@ body{
     background-color: #3bbac9;
 }
 
-.cartSection{
-    padding: 40px;
-}
-
 .cartModalContent{
-    background-color: #ffffff;
-    color: white;
-    min-height: 100vh;
-    padding: 40px;
-}
-
-.modal-header{
-    border-bottom: 1px solid rgba(225, 225, 225, 0.3);
-    padding-bottom: 20px;
-}
-
-.btn-close{
-    color: white;
-}
-.modal-title{
-    font-family: "TitleFont";
-    font-size: 48px;
-    color: #3bbac9;
+    background-color: #fefefe;
+    color: #102b5c;
+    padding: 50px 70px;
+    font-family: "Poppins", sans-serif;
 }
 
 .modal-body{
-    padding-top: 40px;
+    background-color: white;
+    border-radius: 28px;
+    padding: 35px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.modal-body h2{
+.modal-header{
+    border-bottom: none;
+}
+
+.modal-title{
     font-family: "TitleFont";
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 70px;
+    color: #002d68;
 }
 
-.modal-body p{
-    font-family: "Poppins" , sans-serif;
-    font-size: 24px;
-    color: #000000;
+
+.cartItem{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 35px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.leftCart{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.rightCart{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.cartItem img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.cartInfo h3{
+    font-size: px;
+    font-weight: 700;
+    color: #0b3b78;
+    margin-bottom: 8px;
+}
+
+.cartInfo{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    font-size: 18px;
+    color: #666;
+}
+
+
+.quantityControls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    background-color: #0d2f5b;
+    border-radius: 10px;
+    padding: 10px 16px;
+}
+
+.quantityControls button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+.quantityControls span{
+    color: white;
+    font-size: 15px;
+}
+
+.deleteBtn{
+    border: none;
+    background-color: #f0b42d;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.modal-footer .btn{
+    border-radius: 14px;
+    padding: 14px 28px;
+    font-weight: 600;
 }
 
 .modal-footer{
+    margin: 0 auto;
+    padding-top: 25px;
     border-top: 1px solid rgba(225, 225, 225, 0.3);
     padding-top: 25px;
 }
