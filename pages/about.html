@@ -106,7 +106,13 @@
                         <button>+</button>
                     </div>
 
-                    <button class="addButton">Add to Cradle</button>
+                    <button 
+                    class="addBtn"
+                    data-name="Azuron"
+                    data-price="R 2 500.00"
+                    data-image src= "../assets/img/img/adopt1.png">
+                    Add to Cradle
+                </button>
                 </div>
 
                 <hr class="dividerLine">
@@ -504,18 +510,19 @@
                
                
             <div class="modal-footer">
+                <p class="cartTotal">Total: R2500.00</p>
                 <button
                 type="button"
                 class="btn btn-secondary"
                 data-bs-dismiss="modal">
-            Continue Searching
-            </button>
+                Continue Searching
+                </button>
 
-            <a href="../index.html"
-            <button class="btn btn-warning">
+                <a href="../index.html"
+                <button class="btn btn-warning">
                 Finish Adoption
-            </button>
-            </a>
+                </button>
+                </a>
             </div>
             </div>
             </div>
@@ -566,5 +573,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="../js/script.js"></script>
 </body>
 </html>
