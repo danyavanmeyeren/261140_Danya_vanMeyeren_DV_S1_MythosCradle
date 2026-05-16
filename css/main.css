@@ -8,15 +8,14 @@ body{
     src: url("../assets/fonts/Mythology\ Of\ Egypt.otf") 
 }
 
-.navbar {
+.mainNavbar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     padding: 10px 90px;
     width: 95%;
-    max-width: 1200px;
+    max-width: 1400px;
 
     background-color: rgba(225, 225, 225, 0.6);
     border: none;
@@ -30,13 +29,15 @@ body{
     z-index: 10;
 }
 
-.navLinks {
+.mainNavLinks {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    margin-left: 350px;
+    margin-right: auto;
 }
 
-.navLinks a{
+.mainNavLinks a{
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: 300;
@@ -44,31 +45,70 @@ body{
     font-size: 20px;
 }
 
-.navLinks a:hover{
+.mainNavLinks a:hover{
     color: #15d5f5;
 }
 
-.searchBar input{
-    width: 200px;
-    padding: 10px 10px;
-    border-radius: 30px;
+.mainSearchBar input{
     border: none;
+    outline: none;
+    width: 220px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    height: 20px;
+    color: #000000;
     background-color: white;
     border-radius: 10px;
 }
 
-.searchBar{
+.searchIcon{
+    font-size: 30px;
+    color: #000000;
+}
+
+.cartIcon i{
+    font-size: 24px;
+    color: #222;
+}
+
+.cartIcon{
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    padding-left: 18px;
+}
+.mainSearchBar{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
     background: #ffff;
-    padding: 8px 50px;
+    padding: 10px 16px;
     border-radius: 10px;
-    width: 200px;
+    height: 30px;
+    width: 300px;
+    margin-left: 340px;
+}
+
+#cartCount {
+    position: absolute;
+    top: -18px;
+    right: -35px;
+    background-color: #15d5f5;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img{
     height: 55px;
+    margin-top: 10px;
 }
 
 .hero {
@@ -272,7 +312,7 @@ body{
     background-color: #3bbac9;
 }
 
-.footer{
+.mainFooter{
     background-color: #ffffff;
     padding: 80px 120px;
 }
@@ -988,16 +1028,32 @@ body{
 }
 
 .cartModalContent{
-    background-color: #fefefe;
-    color: #102b5c;
-    padding: 50px 70px;
-    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 60px 80px;
+}
+
+.modal-content{
+    background-color: #fafafa;
+    border: none;
+}
+.modal-dialog{
+    max-width: 100%;
+    margin: 0;
+}
+
+.modal{
+    background-color: #f8fbff;
 }
 
 .modal-body{
+    max-width: 1600px;
+    width: 100%;
+    max-height: 520px;
+    margin: 30px auto ;
     background-color: white;
     border-radius: 28px;
-    padding: 35px;
+    padding: 65px;
     margin-top: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -1013,27 +1069,17 @@ body{
 }
 
 
-.cartItem{
-   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 35px 0;
-    border-bottom: 1px solid #e5e5e5;
+.cartItems{
+   display: grid;
+   grid-template-columns: 180px 1fr 100px 120px;
+   align-items: center;
+   gap: 40px;
+   padding: 30px 0;
+   border-bottom: 1px solid #ddd;
 }
 
-.leftCart{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
 
-.rightCart{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-.cartItem img{
+.cartItems img{
     width: 180px;
     height: 180px;
     object-fit: cover;
@@ -1043,8 +1089,9 @@ body{
 .cartInfo h3{
     font-size: px;
     font-weight: 700;
-    color: #0b3b78;
+    color: #002d68;
     margin-bottom: 8px;
+    width: 320px;
 }
 
 .cartInfo{
@@ -1061,9 +1108,10 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 120px;
-    background-color: #0d2f5b;
+    background-color: #002d68;
     border-radius: 10px;
-    padding: 10px 16px;
+    padding: 12px 16px;
+
 }
 
 .quantityControls button{
@@ -1079,7 +1127,7 @@ body{
 
 .deleteBtn{
     border: none;
-    background-color: #f0b42d;
+    background-color: #e9ad1c;
     color: white;
     padding: 12px 18px;
     border-radius: 12px;
@@ -1100,7 +1148,7 @@ body{
 }
 
 .btn-secondary{
-    background-color: #6c757d;
+    background-color: #15d5f5;
     border: none;
     padding: 14px 28px;
     border-radius: 12px;
@@ -1113,7 +1161,7 @@ body{
 }
 
 .btn-warning{
-    background-color: #f2b233;
+    background-color: #e9ad1c;
     border: none;
     color: white;
     padding: 14px 28px;
@@ -1124,4 +1172,22 @@ body{
 
 .btn-warning:hover{
     background-color: #a07f2f;
+}
+
+#thankYouModal {
+    display: none;
+}
+
+#thankYouModal.show {
+    display: block;
+}
+
+#thankYouModal .modal-dialog {
+    margin: 120px auto;
+}
+
+#thankYouModal .modal-content{
+background-color: #ccc;
+border-radius: 25px;
+padding: 30px;
 }

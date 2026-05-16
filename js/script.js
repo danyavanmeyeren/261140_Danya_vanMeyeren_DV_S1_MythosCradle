@@ -1,53 +1,3 @@
-const quantityBoxes = document.querySelectorAll(".quantity");
-
-quantityBoxes.forEach(function (box){
-const plusBtn = box.querySelector("button:last-child");
-const minusBtn = box.querySelector("button:first-child");
-const quantityText = box.querySelector("span");
-
-let quantity = 1;
-
-plusBtn.addEventListener("click" , function (){
-    quantity++;
-    quantityText.textContent = quantity;
-});
-
-minusBtn.addEventListener("click" , function (){
-    if (quantity > 1){
-        quantity--;
-        quantityText.textContent = quantity;
-    }
-});
-});
-
-
-
-
-const plusBtn = document.querySelector(".quantityControls button:last-child");
-const minusBtn = document.querySelector(".quantityControls button:first-child");
-const quantityText = document.querySelector(".quantityControls span");
-
-let quantity = 1;
-
-plusBtn.addEventListener("click" , () => {
-    quantity++;
-    quantityText.textContent = quantity;
-});
-
-minusBtn.addEventListener("click" , () => {
-    if(quantity > 1){
-        quantity--;
-        quantityText.textContent = quantity
-    }
-});
-
-const deleteBtn = document.querySelector(".deleteBtn");
-const cartItem = document.querySelector(".cartItem");
-
-deleteBtn.addEventListener("click" , function (){
-    cartItem.style.display = "none";
-});
-
 const addButtons = document.querySelectorAll(".addButton");
 const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
@@ -60,13 +10,19 @@ addButtons.forEach(function(button){
         const price = Number(button.dataset.price);
         const image = button.dataset.image;
 
-        cart.push({
-            name: name,
-            price: price,
-            image: image,
-            quantity: 1 
-        });
+        const existingItem = cart.find(item => item.name === name);
 
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+
+            cart.push({
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1 
+            });
+        }
         displayCart();
     });
 });
@@ -79,9 +35,11 @@ function displayCart() {
     let total = 0;
 
     cart.forEach(function (item) {
+
         total =+ item.price * item.quantity;
+
   cartItems.innerHTML += `
-      <div class="cartItem">
+      <div class="cartItems">
         <img src="${item.image}" alt="${item.name}">
 
         <div class="cartInfo">
@@ -90,9 +48,9 @@ function displayCart() {
         </div>
 
         <div class="quantityControls">
-          <button>-</button>
+          <button class="minusBtn">-</button>
           <span>${item.quantity}</span>
-          <button>+</button>
+          <button class="plusBtn">+</button>
         </div>
 
         <button class="deleteBtn">Remove</button>
@@ -101,4 +59,83 @@ function displayCart() {
   });
 
   cartTotal.textContent = "Total: R " + total.toFixed(2);
+  updateCartButtons();
 }
+
+function updateCartButtons() {
+    const plusButtons = document.querySelectorAll(".plusBtn");
+    const minusButtons = document.querySelectorAll(".minusBtn");
+    const deleteButtons = document.querySelectorAll(".deleteBtn");
+
+    plusButtons.forEach((button, index) => {
+        button.onclick = () => {
+            cart[index].quantity++;
+
+            displayCart();
+        };
+    })
+
+    minusButtons.forEach((button, index) => {
+        button.onclick = () => {
+
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+
+                displayCart();
+            }
+    };
+    });
+
+    deleteButtons.forEach((button, index) => {
+        button.addEventListener("click" , () => {
+
+            cart.splice(index, 1);
+
+            displayCart();
+        });
+    });
+}
+
+
+
+
+const searchInput = document.getElementById("searchInput");
+const productSections = document.querySelectorAll(".productSection");
+
+searchInput.addEventListener("input" ,function () {
+    const searchValue = searchInput.value.toLowerCase();
+
+    productSections.forEach(function (section) {
+
+        const text = section.textContent.toLowerCase();
+        
+        if (text.includes(searchValue)) {
+        section.style.display ="block";
+        } else {
+        section.style.display = "none";
+        }
+    });
+});
+
+
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit" , function(event) {
+        event.preventDefault();
+
+        const userName = document.getElementById("userName");
+        const thankYouText = document.getElementById("thankYouText")
+
+        thankYouText.textContent =
+        `Thank you for your message, ${userName.value}!`;
+
+        const thankYouModal = new bootstrap.Modal(
+            document.getElementById("thankYouModal")
+        );
+        thankYouModal.show();
+    });
+}
+
+
