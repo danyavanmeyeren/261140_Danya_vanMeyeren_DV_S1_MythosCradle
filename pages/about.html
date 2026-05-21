@@ -41,7 +41,7 @@
                 <i class="bi bi-search"></i>
                 <input type="text" id="searchInput" placeholder="Search">
 
-                <div class="cartIcon" data-bs-toggle="modal" data-bs-toggle="#cartModal">
+                <div id="basketButton" class="basket" data-bs-toggle="modal" data-bs-toggle="#cartModal">
                     <i class="bi bi-basket3"></i>
                     <span id="cartCount">0</span>
                 </div>
@@ -257,7 +257,7 @@
                     class="addButton"
                     data-name="Griffin - Aurelia"
                     data-price="6500"
-                    data-image= "../assets/img/img/adopt2.png">
+                    data-image= "../assets/img/img/adopt3.png">
                     Add to Cradle
                     </button>
                 </div>
@@ -499,19 +499,20 @@
                         <span class="colon">:</span>
                         <span class="value">Mini Leafy Hideout</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="viewCraleWrapper">
+    <div class="viewCraleWrapper">
                      <a href="#"
                      class="viewCradleBtn"
                      data-bs-toggle="modal"
                      data-bs-target="#cartModal">
                     View Cradle
+                    <span class="viewCradleCount" id="viewCradleCount">0</span>
                     </a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <div class="modal fade" id="cartModal" tabindex="-1">

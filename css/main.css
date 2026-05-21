@@ -8,108 +8,6 @@ body{
     src: url("../assets/fonts/Mythology\ Of\ Egypt.otf") 
 }
 
-.mainNavbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 10px 90px;
-    width: 95%;
-    max-width: 1400px;
-
-    background-color: rgba(225, 225, 225, 0.6);
-    border: none;
-    border-radius: 30px;
-    
-
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-.mainNavLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-left: 350px;
-    margin-right: auto;
-}
-
-.mainNavLinks a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: 300;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-}
-
-.mainNavLinks a:hover{
-    color: #15d5f5;
-}
-
-.mainSearchBar input{
-    border: none;
-    outline: none;
-    width: 220px;
-    padding: 14px 18px;
-    border-radius: 12px;
-    border: none;
-    height: 20px;
-    color: #000000;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.searchIcon{
-    font-size: 30px;
-    color: #000000;
-}
-
-.cartIcon i{
-    font-size: 24px;
-    color: #222;
-}
-
-.cartIcon{
-    position: relative;
-    cursor: pointer;
-    border-left: 1px solid #ccc;
-    padding-left: 18px;
-}
-.mainSearchBar{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: #ffff;
-    padding: 10px 16px;
-    border-radius: 10px;
-    height: 30px;
-    width: 300px;
-    margin-left: 340px;
-}
-
-#cartCount {
-    position: absolute;
-    top: -18px;
-    right: -35px;
-    background-color: #15d5f5;
-    color: white;
-    font-size: 14px;
-    font-weight: 300;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img{
-    height: 55px;
-    margin-top: 10px;
-}
 
 .hero {
     display: flex;
@@ -339,7 +237,7 @@ body{
 
 .footerCenter h3{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .footerCenter img{
@@ -793,6 +691,10 @@ body{
     margin-top: 60px;
     padding-right: 10px;
     text-align: right;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 9999;
 }
 
 .viewCradleBtn{
@@ -805,8 +707,10 @@ body{
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    margin-left: 500px;
     white-space: nowrap;
+    display: inline-block;
+    position: static;
+    margin: 0;
 
 }
 
@@ -1174,20 +1078,174 @@ body{
     background-color: #a07f2f;
 }
 
-#thankYouModal {
+.thankYouPopup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankYouPopup.show {
+    display: flex;
+}
+
+.thankYouBox {
+    background-color: #f7f4ed;
+    width: 500px;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.closeThankYou {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    border: none;
+    background-color: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+a.viewCradleBtn {
+    position: fixed;
+    right: 65px;
+    bottom: 25px;
+    z-index: 9999;
+
+    background-color: #f2b233;
+}
+
+.viewCradleCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: #15d5f5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 300;
     display: none;
 }
 
-#thankYouModal.show {
-    display: block;
+.mainNavbar {
+    all: unset;
+    position: absolute;
+    right: 60px;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 90px;
+    width: 95%;
+    max-width: 1400px !important;
+
+    background-color: rgba(225, 225, 225, 0.6);
+    border: none;
+    border-radius: 30px;
+    
+
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
-#thankYouModal .modal-dialog {
-    margin: 120px auto;
+.mainNavLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 350px;
+    margin-right: auto;
 }
 
-#thankYouModal .modal-content{
-background-color: #ccc;
-border-radius: 25px;
-padding: 30px;
+.mainNavLinks a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.mainNavLinks a:hover{
+    color: #15d5f5;
+}
+
+.mainSearchBar input{
+    all: unset;
+    border: none;
+    outline: none;
+    width: 220px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: none;
+    height: 20px !important;
+    color: #000000;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.searchIcon{
+    font-size: 30px;
+    color: #000000;
+}
+
+.basket i{
+    font-size: 24px;
+    color: #222;
+}
+
+.basket{
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    padding-left: 18px;
+}
+.mainSearchBar{
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #ffff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    height: 30px !important;
+    width: 300px;
+    margin-left: 340px;
+}
+
+#cartCount {
+    all: unset;
+    position: absolute;
+    top: -18px;
+    right: -35px;
+    background-color: #15d5f5;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    height: 55px;
+    margin-top: 10px;
 }
