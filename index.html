@@ -88,7 +88,11 @@
             <h3>BEGIN YOUR JOURNEY</h3>
             <h2>Tiny Ledgends<br>Big Hearts</h2>
             <p>Begin your journey into legend: tiny dragons, shimmering pegasi, mischievous kitsune, and watchful basilisks are ready to meet their families. Delight in enchanted encounters, gentle care, and joyful playtime. Heartwarming bonds await as these legendary creatures find their forever homes.</p>
-            <button>Cradle a legend</button>
+
+            <button class="cradleButton" id="cradleButton">
+                Cradle a legend
+            </button>
+            
         </div>
     </section>
 
@@ -135,7 +139,9 @@
             </div>
         </div>
 
-        <button class="legendButton">Cradle a Legend</button>
+        <button class="legendButton" id="legendButton">
+            Cradle a legend
+        </button>
     </section>
 
     <footer class="mainFooter">
@@ -177,6 +183,41 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content cartModalContent">
+
+
+                <div class="modal-header">
+                    <h1 class="modal-title">Chosen Companions</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="cartItems"></div>
+                    <p id="cartTotal">Total: R 0.00</p>
+                </div>
+               
+               
+                <div class="modal-footer">
+                    <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+                    Continue Searching
+                    </button>
+
+                    <a href="../index.html">
+                    <button class="btn btn-warning">
+                    Finish Adoption
+                    </button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

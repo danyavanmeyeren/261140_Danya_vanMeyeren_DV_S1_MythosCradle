@@ -224,6 +224,24 @@ if (basketButton) {
     });
 }
 
+const legendButton = document.getElementById("legendButton");
+
+if (legendButton) {
+    legendButton.addEventListener("click" , function () {
+        window.location.href = "pages/about.html";
+    });
+}
+
+const cradleButton = document.getElementById("cradleButton");
+
+if (cradleButton) {
+    cradleButton.addEventListener("click" , function () {
+        window.location.href = "pages/about.html";
+    });
+}
+
+
+
 const viewCradleBtn = document.querySelector(".viewCradleBtn");
 const cartModalElement = document.getElementById("cartModal");
 
