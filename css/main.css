@@ -1290,3 +1290,14 @@ a.viewCradleBtn {
     flex-shrink: 0;
 }
 
+
+#cartModal .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+#cartTotal {
+    margin-right: auto;
+}

@@ -58,20 +58,23 @@ addButtons.forEach(function(button){
 
         const existingItem = cart.find(item => item.name === name);
 
+
+        const selectedQuantity = Number(button.parentElement.querySelector(".quantity span").textContent);
+
         if (existingItem) {
-            existingItem.quantity++;
+            existingItem.quantity += selectedQuantity;
         } else {
             cart.push({
                 name: name,
                 price: price,
                 image: image,
-                quantity: Number(button.parentElement.querySelector(".quantity span").textContent)
+                quantity: selectedQuantity
             });
         }
 
-        saveCart();
         displayCart();
         updateCartCount();
+        saveCart();
 
         cartCount.textContent = cart.reduce((sum, item) => {
             return sum + item.quantity;
@@ -96,7 +99,7 @@ function displayCart() {
 
     cart.forEach(function (item) {
 
-        total =+ item.price * item.quantity;
+        total = total + Number(item.price) * Number(item.quantity);
 
   cartItems.innerHTML += `
       <div class="cartItems">
@@ -118,6 +121,8 @@ function displayCart() {
     `;
   });
 
+  console.log(cart);
+  console.log("TOTAL" , total);
   cartTotal.textContent = "Total: R " + total.toFixed(2);
   updateCartButtons();
 }
@@ -132,9 +137,9 @@ function updateCartButtons() {
         button.onclick = () => {
             cart[index].quantity++;
 
-            saveCart();
             displayCart();
             updateCartCount();
+            saveCart();
         };
     })
 
@@ -144,9 +149,9 @@ function updateCartButtons() {
             if (cart[index].quantity > 1) {
                 cart[index].quantity--;
 
-                saveCart();
                 displayCart();
                 updateCartCount();
+                saveCart();
             }
     };
     });
@@ -156,9 +161,9 @@ function updateCartButtons() {
 
             cart.splice(index, 1);
 
-            saveCart();
             displayCart();
             updateCartCount();
+            saveCart();
         });
     });
 }
