@@ -227,17 +227,22 @@ if (basketButton) {
 const viewCradleBtn = document.querySelector(".viewCradleBtn");
 const cartModalElement = document.getElementById("cartModal");
 
-cartModalElement.addEventListener("show.bs.modal" , function () {
-    viewCradleBtn.style.display = "none";
-});
 
-cartModalElement.addEventListener("hidden.bs.modal" , function () {
-    viewCradleBtn.style.display = "block"
-});
+if (cartModalElement && viewCradleBtn) {
+    cartModalElement.addEventListener("show.bs.modal" , function () {
+        viewCradleBtn.style.display = "none";
+    });
 
-displayCart();
+    cartModalElement.addEventListener("hidden.bs.modal" , function () {
+        viewCradleBtn.style.display = "block";
+    });
+
+    if(cartItems && cartTotal) {
+        displayCart();
+    }
+}
+
 updateCartCount();
-
 
 
 
