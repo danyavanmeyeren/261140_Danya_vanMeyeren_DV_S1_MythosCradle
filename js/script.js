@@ -28,7 +28,11 @@ const cartTotal = document.getElementById("cartTotal");
 const cartCount = document.getElementById("cartCount");
 const viewCradleCount = document.getElementById("viewCradleCount");
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart" , JSON.stringify(cart));
+}
 
 function updateCartCount() {
     const totalQuantity = cart.reduce((sum , item) => {
@@ -64,6 +68,8 @@ addButtons.forEach(function(button){
                 quantity: Number(button.parentElement.querySelector(".quantity span").textContent)
             });
         }
+
+        saveCart();
         displayCart();
         updateCartCount();
 
@@ -126,6 +132,7 @@ function updateCartButtons() {
         button.onclick = () => {
             cart[index].quantity++;
 
+            saveCart();
             displayCart();
             updateCartCount();
         };
@@ -137,6 +144,7 @@ function updateCartButtons() {
             if (cart[index].quantity > 1) {
                 cart[index].quantity--;
 
+                saveCart();
                 displayCart();
                 updateCartCount();
             }
@@ -148,6 +156,7 @@ function updateCartButtons() {
 
             cart.splice(index, 1);
 
+            saveCart();
             displayCart();
             updateCartCount();
         });
@@ -225,6 +234,9 @@ cartModalElement.addEventListener("show.bs.modal" , function () {
 cartModalElement.addEventListener("hidden.bs.modal" , function () {
     viewCradleBtn.style.display = "block"
 });
+
+displayCart();
+updateCartCount();
 
 
 
