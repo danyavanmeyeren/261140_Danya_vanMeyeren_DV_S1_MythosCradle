@@ -119,16 +119,12 @@ body{
     border-radius: 20px;
 }
 
-.sanctuaryText h4{
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    margin-top: 10px;
-    color: #2b2153;
-}
 
 .sanctuaryText h2{
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
+    color: #002d68;
+    font-weight: 700;
 }
 
 .sanctuaryText p{
@@ -256,7 +252,7 @@ body{
 .socialIcons{
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 70px;
 }
 
 .socialIcons img{
@@ -870,10 +866,12 @@ body{
 }
 
 .formCard{
-    width: 100%;
-    max-width: 800px;
-    padding: 50px 60px;
-    margin-left: 80px;
+    width: 480px;
+    height: 800px;
+    max-width: 480px;
+    padding: 50px 50px;
+    margin-left: 150px;
+    margin-top: 70px;
     background-image: url("../assets/img/img/formBackground.png");
     background-size: cover;
     background-position: center;
@@ -890,6 +888,7 @@ body{
 
 .formCard label{
     font-size: 18px;
+    flex-wrap: nowrap;
 }
 
 .formCard form{
@@ -1301,4 +1300,37 @@ a.viewCradleBtn {
 
 #cartTotal {
     margin-right: auto;
+}
+
+.footerCenter h3{
+    all: unset;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.footerRight h3 {
+    all: unset;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 80px;
+    font-weight: 700;
+    
+}
+
+
+.sanctuaryText h4{
+    all: unset;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #15d5f5 ;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+.socialIcons{
+    all: unset;
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
 }
